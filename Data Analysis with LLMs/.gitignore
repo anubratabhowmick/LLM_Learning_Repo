@@ -8,6 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+env/
 build/
 develop-eggs/
 dist/
@@ -20,6 +21,7 @@ parts/
 sdist/
 var/
 wheels/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -45,7 +47,6 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-*.py,cover
 .hypothesis/
 .pytest_cache/
 
@@ -56,8 +57,6 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-db.sqlite3
-db.sqlite3-journal
 
 # Flask stuff:
 instance/
@@ -70,7 +69,7 @@ instance/
 docs/_build/
 
 # PyBuilder
-target/
+.target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -83,18 +82,20 @@ ipython_config.py
 .python-version
 
 # pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
+#  According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#  However, in case of collaboration, if having platform-specific dependencies or dependencies
+#  having no cross-platform support, pipenv may install dependencies that don't work, or not
+#  install all needed dependencies.
+Pipfile.lock
+
+# poetry
+poetry.lock
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
 
 # Celery stuff
 celerybeat-schedule
-celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
@@ -121,46 +122,13 @@ venv.bak/
 # mypy
 .mypy_cache/
 .dmypy.json
-dmypy.json
+.dmypy.json.5
 
 # Pyre type checker
 .pyre/
 
-# API keys and secrets
-*.pem
-*.key
+# pytype static type analyzer
+.pytype/
 
-# Model weights and large files
-*.bin
-*.pt
-*.pth
-*.gguf
-*.onnx
-
-# Data files
-*.pdf
-*.csv
-*.db
-*.sqlite
-*.sqlite3
-*.h5
-*.hdf5
-
-# VS Code
-.vscode/
-*.code-workspace
-
-# JetBrains IDEs
-.idea/
-*.iml
-
-# OS specific
-.DS_Store
-Thumbs.db
-
-# Project specific
-*/logs/
-*db/
-*learning_data/
-mcqgenerator.egg-info
-Regulation_Chatbot.egg-info
+# Cython debug symbols
+cython_debug/
